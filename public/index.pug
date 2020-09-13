@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet")
+    link(rel="icon" type="image/png" sizes="32x32" href=require('../src/assets/images/favicon-32x32.png').default)
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Frontend Mentor | Coding Bootcamp Testimonials Slider
+  body
+    .container
+      .main
+        .main__avatar
+          .avatar--img
+            img#clientImg(src='../src/assets/images/image-tanya.jpg', alt='person')
+          .avatar--btn
+              img#prevButton(src='../src/assets/images/icon-prev.svg', alt='prev')
+              img#nextButton(src='../src/assets/images/icon-next.svg', alt='next')
+        .main__caption
+          p#captionText
+            | &ldquo; I&rsquo;ve been interested in coding for a while but never taken the jump, until now.
+            | I couldn&rsquo;t recommend this course enough. I&rsquo;m now in the job of my dreams and so
+            | excited about the future. &rdquo;
+          span
+            h3#name Tanya Sinclair 
+            h4#position UX Engineer
+

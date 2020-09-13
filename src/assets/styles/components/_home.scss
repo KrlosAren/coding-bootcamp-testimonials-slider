@@ -1,0 +1,223 @@
+@include media(desktop-s) {
+  .container {
+    height: 100vh;
+    padding: 100px;
+    width: 100%;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: calc(100vh - 200px);
+    position: relative;
+    width: 100%;
+  }
+
+  .main__caption {
+    align-items: flex-start;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/-1;
+    grid-row: 1/3;
+    justify-content: center;
+    left: 0;
+    padding: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    p {
+      color: $color-primary;
+      font-family: $font-inter;
+      font-size: $font-32;
+      font-weight: $font-300;
+      line-height: 1.2em;
+      position: relative;
+      width: 70%;
+    }
+  }
+
+  .main__caption span {
+    align-items: baseline;
+    display: flex;
+    margin-top: 10px;
+
+    h3 {
+      color: $color-primary;
+      font-family: $font-inter;
+      font-weight: $font-700;
+    }
+
+    h4 {
+      color: $color-secondary;
+      font-family: $font-inter;
+      font-weight: $font-500;
+      margin: 0 5px;
+    }
+  }
+
+  .main__avatar {
+    align-items: center;
+    background-image: url('../../images/pattern-bg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/3;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .avatar--img {
+    align-items: center;
+    border-radius: 0.8rem;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding: 30px;
+    width: 100%;
+
+    img {
+      @include mixin-shadow(0, 0, 2px, 26px, rgba(0, 0, 0, 0.2));
+      border-radius: 0.8rem;
+      height: auto;
+      width: 85%;
+    }
+  }
+
+  .avatar--btn {
+    @include mixin-shadow(0, 0, 2px, 26px, rgba(0, 0, 0, 0.2));
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    border-radius: 2rem;
+    bottom: 0%;
+    display: flex;
+    height: 4rem;
+    justify-content: space-evenly;
+    left: 25%;
+    position: absolute;
+    width: 15%;
+    z-index: 1000;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+
+    img {
+      padding: 1rem;
+    }
+  }
+}
+
+@include media(mobile-only) {
+  .container {
+    background-image: url('../../images/pattern-curve.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .main {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    height: 100%;
+    width: 100%;
+  }
+
+  .main__avatar {
+    align-items: center;
+    background-image: url('../../images/pattern-bg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    grid-row: 1/2;
+    height: 100%;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 20px;
+    width: 90%;
+  }
+
+  .avatar--img {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    width: 80%;
+
+    img {
+      @include mixin-shadow(0, 0, 2px, 26px, rgba(0, 0, 0, 0.2));
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .avatar--btn {
+    @include mixin-shadow(0, 0, 10px, 20px, rgba(0, 0, 0, 0.3));
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    border-radius: 1.5rem;
+    bottom: 20px;
+    display: flex;
+    height: 2.5rem;
+    justify-content: space-between;
+    position: relative;
+    width: 20%;
+
+    img {
+      padding: 0.5rem;
+    }
+  }
+
+  .main__caption {
+    align-items: center;
+    background-image: url('../../images/pattern-quotes.svg');
+    background-position: center 10%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    grid-row: 2/3;
+    height: 100%;
+    justify-content: center;
+    padding: 40px;
+    width: 100%;
+
+    p {
+      color: $color-primary;
+      font-family: $font-inter;
+      font-size: $font-32 - 12;
+      font-weight: $font-300;
+      line-height: 1.5rem;
+      text-align: center;
+    }
+
+
+    span {
+      text-align: center;
+
+      h3 {
+        color: $color-primary;
+        font-size: $font-32 - 16;
+        font-weight: $font-700;
+        margin-top: 8px;
+      }
+      
+      h4 {
+        color: $color-secondary;
+        font-size: $font-32 - 16;
+        font-weight: $font-500;
+        margin: 5px;
+      }
+    }
+  }
+}

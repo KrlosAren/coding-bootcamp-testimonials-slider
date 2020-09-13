@@ -1,0 +1,22 @@
+$color-primary: hsl(240, 38%, 20%);
+$color-secondary: hsl(240, 18%, 77%);
+
+$font-32: 32px;
+$font-inter: 'Inter', sans-serif;
+
+$font-300: 300;
+$font-500: 500;
+$font-700: 700;
+
+$responsive-mobile: 375px;
+$responsive-desktop: 1440px;
+
+
+@mixin mixin-border-red($color : rgb(250,0,0)) {
+  border: 1px solid $color;
+}
+
+
+@mixin mixin-shadow($x, $y,$blur,$spread,$color-shadow) {
+  box-shadow: $x $y $spread $blur $color-shadow;
+}
