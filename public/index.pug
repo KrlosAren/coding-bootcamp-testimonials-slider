@@ -13,8 +13,8 @@ html(lang="en")
           .avatar--img
             img#clientImg(src='../src/assets/images/image-tanya.jpg', alt='person')
           .avatar--btn
-              img#prevButton(src='../src/assets/images/icon-prev.svg', alt='prev')
-              img#nextButton(src='../src/assets/images/icon-next.svg', alt='next')
+              img#prevButton(src=require('../src/assets/images/icon-prev.svg').default, alt='prev')
+              img#nextButton(src=require('../src/assets/images/icon-next.svg').default, alt='next')
         .main__caption
           p#captionText
             | &ldquo; I&rsquo;ve been interested in coding for a while but never taken the jump, until now.
