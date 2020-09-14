@@ -11,7 +11,7 @@ html(lang="en")
       .main
         .main__avatar
           .avatar--img
-            img#clientImg(src='../src/assets/images/image-tanya.jpg', alt='person')
+            img#clientImg(src=require('../src/assets/images/image-tanya.jpg').default, alt='person')
           .avatar--btn
               img#prevButton(src=require('../src/assets/images/icon-prev.svg').default, alt='prev')
               img#nextButton(src=require('../src/assets/images/icon-next.svg').default, alt='next')
